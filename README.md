@@ -29,3 +29,4 @@ nestjs에서 typescript를 이용해 CRUD 구현입니다. (스터디)
 
 ## 개발 과정
 1. `nest g res users`
+2. `npm install @nestjs/swagger swagger-ui-express` 

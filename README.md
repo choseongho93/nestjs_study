@@ -30,10 +30,9 @@ nestjs에서 typescript를 이용해 CRUD 구현입니다. (스터디)
 ## 개발 과정
 1. `nest g res users`
 2. `npm install @nestjs/swagger swagger-ui-express` 
-3.`npm i @nestjsx/crud @nestjsx/crud-typeorm @nestjs/typeorm typeorm class-transformer class-validator`
+3. `npm i @nestjsx/crud @nestjsx/crud-typeorm @nestjs/typeorm typeorm class-transformer class-validator`
 4. `nest generate module product `
 `nest generate controller product`
 `nest generate service product`
 `nest generate class product/product`
-5. `npm i sql.js`
-- create ormconfig.json
+5. `npm i sql.js` create ormconfig.json

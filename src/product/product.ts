@@ -1,25 +1,26 @@
 import { Entity, PrimaryGeneratedColumn, Column} from 'typeorm';
-import { IsString, IsNumber, MinLength, Min, IsDefined } from 'class-validator';
+import { IsString, IsNumber, MinLength, Min, IsDefined} from 'class-validator';
 
 @Entity()
 export class Product {
+
     @PrimaryGeneratedColumn()
     productId: number;
 
     @Column()
-    @IsDefined({ always : true})
+    @IsDefined({always : true})
     @IsString({ always : true})
-    @MinLength(2, { always : true})
-    name: string;
+    @MinLength(2,{always: true})
+    name : string;
 
     @Column()
-    @IsDefined({ always : true})
+    @IsDefined({always : true})
     @IsString({ always : true})
-    @MinLength(3, { always : true})
-    sku:string;
+    @MinLength(3,{always: true})
+    sku : string;
 
     @Column()
     @IsNumber()
-    @Min(0, {always: true})
-    price: number;
+    @Min(0,{always: true})
+    price : number;
 }

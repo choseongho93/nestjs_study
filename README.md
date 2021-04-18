@@ -3,7 +3,7 @@ nestjs에서 typescript를 이용해 CRUD 구현입니다. (스터디)
 - docker 적용
 
 
-## Spec
+## 스펙(Spec)
 1. node : v10.24.0
 2. npm : v6.7.0
 3. nestjs : v7.6.0

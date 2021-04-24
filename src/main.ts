@@ -8,10 +8,10 @@ async function bootstrap() {
 
   // Swagger 
   const options = new DocumentBuilder()
-  .setTitle('users')
+  .setTitle('nest')
   .setDescription('Simple service for users managment')
   .setVersion('1.0')
-  .addTag('users')
+  .addTag('product')
   .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('docs', app, document);

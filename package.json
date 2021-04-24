@@ -36,7 +36,8 @@
     "rxjs": "^6.6.6",
     "sql.js": "^1.5.0",
     "swagger-ui-express": "^4.1.6",
-    "typeorm": "^0.2.32"
+    "typeorm": "^0.2.32",
+    "update": "^0.7.4"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.6.0",

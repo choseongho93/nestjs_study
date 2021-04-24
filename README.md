@@ -45,7 +45,5 @@ nestjs에서 typescript를 이용해 CRUD 구현입니다. (스터디)
 5. `npm i sql.js` create ormconfig.json
 6. API GET / POST Request Test
 
-
-
 ## Ref
 - https://sabljakovich.medium.com/nestjs-crud-web-services-32f4cd333f1a

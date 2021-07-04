@@ -14,4 +14,4 @@ Steps to run this project:
 1. npm install typeorm -g
 2. typeorm init --name MyProject --database mysql
 3. cd MyProject && npm install
-4. 
+4. npm start

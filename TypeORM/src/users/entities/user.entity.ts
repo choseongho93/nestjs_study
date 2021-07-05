@@ -1,11 +1,9 @@
 import { PrimaryGeneratedColumn, Column, PrimaryColumn, Entity } from 'typeorm';
 
-type UserRole = 'client' | 'owner' | 'delivery';
-
 @Entity()
 export class User {
 
-  @PrimaryGeneratedColumn('rowid')
+  @PrimaryGeneratedColumn()
   id: number;
 
   @PrimaryColumn()

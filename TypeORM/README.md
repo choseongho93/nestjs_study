@@ -1,17 +1,33 @@
-# TypeORM
-TypeORM study
+# nuber-eats-backend
+
+## npm install 
+1. `npm i @nestjs/graphql graphql-tools graphql apollo-server-express`
+2. `npm i class-validator class-transformer`
+3. `npm i --save @nestjs/typeorm typeorm pg`
+4. `npm i --save @nestjs/config`
+5. `npm i cross-env`
+6. `npm i joi` // env 유효성검사 
+
+## USER CRUD
+1. `nest g mo users` 
+2. `nest g mo common` 
 
 
-# Awesome Project Build with TypeORM
 
-Steps to run this project:
+## User Model:
 
-1. Run `npm i` command
-2. Setup database settings inside `ormconfig.json` file
-3. Run `npm start` command
+- id
+- createdAt
+- updatedAt
 
-# install
-1. npm install typeorm -g
-2. typeorm init --name MyProject --database mysql
-3. cd MyProject && npm install
-4. npm start
+- email
+- password
+- role(client|owner|delivery)
+
+## User CRUD:
+
+- Create Account
+- Log In
+- See Profile
+- Edit Profile
+- Verify Email

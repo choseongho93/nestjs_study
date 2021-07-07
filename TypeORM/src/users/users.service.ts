@@ -20,8 +20,8 @@ export class UserService {
    * 특정 유저 조회
    * @param id
    */
-  findOne(id: string): Promise<User> {
-    return this.userRepository.findOne({ userId: id });
+  findOne(id: number): Promise<User> {
+    return this.userRepository.findOne({ id: id });
   }
   /**
    * 유저 저장
@@ -33,7 +33,7 @@ export class UserService {
   /**
    * 유저 삭제
    */
-  async deleteUser(id: string): Promise<void> {
-    await this.userRepository.delete({ userId: id });
+  async deleteUser(id: number): Promise<void> {
+    await this.userRepository.delete({ id: id });
   }
 }

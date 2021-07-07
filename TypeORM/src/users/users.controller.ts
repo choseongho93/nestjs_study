@@ -20,9 +20,9 @@ export class UserController {
     });
   }
 
-  @Get(':userId')
-  async findOne(@Param('userId') id: string): Promise<User> {
-    const foundUser = await this.userService.findOne(id);
+  @Get(':id')
+  async findOne(@Param('id') id: number): Promise<User> {
+    const foundUser = await this.userService.findOne(+id);
     return Object.assign({
       data: foundUser,
       statusCode: 200,
@@ -35,17 +35,17 @@ export class UserController {
     await this.userService.saveUser(user);
     return Object.assign({
       data: { ...user },
-      statusCode: 201,
+      statusCode: 200,
       statusMsg: `saved successfully`,
     });
   }
 
-  @Delete(':userId')
-  async deleteUser(@Param('userId') id: string): Promise<string> {
-    await this.userService.deleteUser(id);
+  @Delete(':id')
+  async deleteUser(@Param('id') id: string): Promise<string> {
+    await this.userService.deleteUser(+id);
     return Object.assign({
       data: { userId: id },
-      statusCode: 201,
+      statusCode: 200,
       statusMsg: `deleted successfully`,
     });
   }

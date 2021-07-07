@@ -1,7 +1,6 @@
-import { Body, Controller, Delete, Get, Param, Post, Res } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
 import { UserService } from './users.service';
 import { User } from './entities/user.entity';
-
 @Controller('user')
 export class UserController {
   constructor(
@@ -27,6 +26,16 @@ export class UserController {
       data: foundUser,
       statusCode: 200,
       statusMsg: `데이터 조회가 성공적으로 완료되었습니다.`,
+    });
+  }
+
+  @Patch(':id')
+  async updateUser(@Param('id') id: number, @Body() user: User): Promise<string> {
+    await this.userService.updateUser(id, user);
+    return Object.assign({
+      data: { ...user },
+      statusCode: 200,
+      statusMsg: `updated successfully`,
     });
   }
 

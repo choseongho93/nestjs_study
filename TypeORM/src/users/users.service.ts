@@ -5,6 +5,9 @@ import { Repository } from 'typeorm/index';
 
 @Injectable()
 export class UserService {
+  /**
+   * 생성자
+   */
   constructor(
     @InjectRepository(User) private userRepository: Repository<User>,
   ) {
@@ -23,6 +26,16 @@ export class UserService {
   findOne(id: number): Promise<User> {
     return this.userRepository.findOne({ id: id });
   }
+   /**
+   * 유저 수정
+   * @param user
+   */
+    async updateUser(id: number, user: User): Promise<void> {
+      await this. userRepository.update(
+        id ,
+        user
+      );
+    }
   /**
    * 유저 저장
    * @param user
